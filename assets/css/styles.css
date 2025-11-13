@@ -13,20 +13,21 @@
     --color-quaternary-dark: #38f9d7;
     --color-success: #28a745;
 
-    /* Neutral Colors */
+    /* Neutral Colors - Light Mode */
     --color-text-primary: #333;
     --color-text-secondary: #555;
     --color-text-tertiary: #666;
     --color-text-muted: #999;
     --color-text-placeholder: #aaa;
 
-    /* Background Colors */
+    /* Background Colors - Light Mode */
     --color-bg-primary: #ffffff;
     --color-bg-secondary: #f8f9fa;
     --color-bg-tertiary: #f0f0f0;
     --color-bg-hover: #e0e0e0;
+    --color-bg-body: #f5f5f5;
 
-    /* Border Colors */
+    /* Border Colors - Light Mode */
     --color-border-light: #e0e0e0;
     --color-border-medium: #f0f0f0;
 
@@ -58,7 +59,7 @@
     --font-size-icon: 48px;
     --font-size-logo: 64px;
 
-    /* Shadows */
+    /* Shadows - Light Mode */
     --shadow-sm: 0 4px 15px rgba(102, 126, 234, 0.3);
     --shadow-md: 0 8px 25px rgba(102, 126, 234, 0.5);
     --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -67,6 +68,32 @@
     --transition-fast: 0.15s ease;
     --transition-base: 0.3s ease;
     --transition-slow: 0.5s ease;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    /* Neutral Colors - Dark Mode */
+    --color-text-primary: #e4e4e7;
+    --color-text-secondary: #d4d4d8;
+    --color-text-tertiary: #a1a1aa;
+    --color-text-muted: #71717a;
+    --color-text-placeholder: #52525b;
+
+    /* Background Colors - Dark Mode */
+    --color-bg-primary: #18181b;
+    --color-bg-secondary: #27272a;
+    --color-bg-tertiary: #3f3f46;
+    --color-bg-hover: #52525b;
+    --color-bg-body: #09090b;
+
+    /* Border Colors - Dark Mode */
+    --color-border-light: #3f3f46;
+    --color-border-medium: #27272a;
+
+    /* Shadows - Dark Mode */
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.9);
 }
 
 
@@ -81,10 +108,12 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f5f5;
+    background: var(--color-bg-body);
+    color: var(--color-text-primary);
     min-height: 100vh;
     padding: 0;
     margin: 0;
+    transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 .app-wrapper {
@@ -868,5 +897,55 @@ h1 {
 
     .employee-card__info {
         font-size: var(--font-size-xs);
+    }
+}
+
+
+/* ===================================
+   Dark Mode Toggle Button
+   =================================== */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--color-bg-primary);
+    border: 2px solid var(--color-border-light);
+    border-radius: 30px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.theme-toggle__icon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle__text {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+    }
+
+    .theme-toggle__text {
+        display: none;
     }
 }

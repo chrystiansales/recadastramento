@@ -10,6 +10,50 @@ let employees = [];
 
 
 // ===================================
+// Dark Mode / Theme Toggle
+// ===================================
+
+/**
+ * Inicializa o tema baseado na preferência salva do usuário
+ */
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeToggleButton(savedTheme);
+}
+
+/**
+ * Alterna entre tema claro e escuro
+ */
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeToggleButton(newTheme);
+}
+
+/**
+ * Atualiza o ícone e texto do botão de toggle
+ */
+function updateThemeToggleButton(theme) {
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    if (themeIcon && themeText) {
+        if (theme === 'dark') {
+            themeIcon.textContent = '☀️';
+            themeText.textContent = 'Light';
+        } else {
+            themeIcon.textContent = '🌙';
+            themeText.textContent = 'Dark';
+        }
+    }
+}
+
+
+// ===================================
 // Menu Mobile
 // ===================================
 
@@ -317,6 +361,7 @@ function initEmployeeForm() {
  * Inicializa a aplicação quando o DOM estiver pronto
  */
 function init() {
+    initializeTheme();
     initInputMasks();
     initEmployeeForm();
 }
