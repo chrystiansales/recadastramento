@@ -28,6 +28,27 @@ function toggleMobileMenu() {
     }
 }
 
+/**
+ * Fecha o menu mobile antes de navegar
+ */
+function closeMobileMenuAndNavigate(url) {
+    const menu = document.querySelector('.sidebar__menu');
+    const footer = document.querySelector('.sidebar__footer');
+
+    // Fecha o menu
+    if (menu) {
+        menu.classList.remove('sidebar__menu--open');
+    }
+    if (footer) {
+        footer.classList.remove('sidebar__footer--open');
+    }
+
+    // Pequeno delay para animação antes de navegar
+    setTimeout(() => {
+        window.location.href = url;
+    }, 100);
+}
+
 
 // ===================================
 // Navegação entre Telas
