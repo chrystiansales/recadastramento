@@ -905,20 +905,19 @@ h1 {
    Dark Mode Toggle Button
    =================================== */
 .theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
     background: var(--color-bg-primary);
     border: 2px solid var(--color-border-light);
     border-radius: 30px;
-    padding: 8px 16px;
+    padding: 10px 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-base);
+    margin: var(--spacing-md) var(--spacing-lg);
+    font-family: inherit;
 }
 
 .theme-toggle:hover {
@@ -940,12 +939,7 @@ h1 {
 
 @media (max-width: 768px) {
     .theme-toggle {
-        top: 15px;
-        right: 15px;
-        padding: 6px 12px;
-    }
-
-    .theme-toggle__text {
-        display: none;
+        margin: var(--spacing-md) var(--spacing-md) var(--spacing-sm);
+        padding: 12px;
     }
 }
