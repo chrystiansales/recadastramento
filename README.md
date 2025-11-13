@@ -72,14 +72,20 @@ npx http-server
 ## 📂 Estrutura do Projeto
 
 ```
-.
-├── index.html                  # Página inicial
-├── form-dados-pessoais.html   # Formulário de dados pessoais
-├── form-contatos.html         # Página de contatos
-├── styles.css                  # Estilos com BEM e CSS Variables
-├── app.js                      # Lógica JavaScript
-├── CLAUDE.md                   # Documentação técnica
-└── README.md                   # Este arquivo
+recadastramento/
+├── assets/
+│   ├── css/
+│   │   └── styles.css         # Estilos com BEM e CSS Variables
+│   ├── js/
+│   │   └── app.js             # Lógica JavaScript
+│   └── images/                # Imagens e assets visuais
+├── pages/
+│   ├── dados-pessoais.html    # Formulário de dados pessoais
+│   └── contatos.html          # Página de contatos
+├── index.html                 # Página inicial
+├── README.md                  # Este arquivo
+├── CLAUDE.md                  # Documentação técnica
+└── .gitignore                 # Arquivos ignorados pelo Git
 ```
 
 ## 🎨 Design

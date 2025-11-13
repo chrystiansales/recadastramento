@@ -9,13 +9,20 @@ Sistema de Gestão de Funcionários - A web application for employee management 
 ## Project Structure
 
 ```
-.
-├── index.html                  # Home page with CCM logo
-├── form-dados-pessoais.html   # Personal data form page
-├── form-contatos.html         # Contacts list page
-├── styles.css                  # Organized CSS with CSS variables and BEM methodology
-├── app.js                      # JavaScript logic for app functionality
-└── CLAUDE.md                   # This file
+recadastramento/
+├── assets/
+│   ├── css/
+│   │   └── styles.css         # Organized CSS with CSS variables and BEM methodology
+│   ├── js/
+│   │   └── app.js             # JavaScript logic for app functionality
+│   └── images/                # Image assets (currently empty)
+├── pages/
+│   ├── dados-pessoais.html    # Personal data form page
+│   └── contatos.html          # Contacts list page
+├── index.html                 # Home page with CCM logo
+├── README.md                  # Project documentation
+├── CLAUDE.md                  # This file - Claude Code guidance
+└── .gitignore                 # Git ignore patterns
 ```
 
 ## Architecture & Code Organization

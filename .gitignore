@@ -1,0 +1,19 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (if added in future)
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+
+# Claude
+.claude/
