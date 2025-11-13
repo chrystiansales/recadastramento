@@ -10,6 +10,26 @@ let employees = [];
 
 
 // ===================================
+// Menu Mobile
+// ===================================
+
+/**
+ * Alterna a visibilidade do menu em dispositivos móveis
+ */
+function toggleMobileMenu() {
+    const menu = document.querySelector('.sidebar__menu');
+    const footer = document.querySelector('.sidebar__footer');
+
+    if (menu) {
+        menu.classList.toggle('sidebar__menu--open');
+    }
+    if (footer) {
+        footer.classList.toggle('sidebar__footer--open');
+    }
+}
+
+
+// ===================================
 // Navegação entre Telas
 // ===================================
 

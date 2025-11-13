@@ -234,6 +234,12 @@ h1 {
     background: rgba(255, 255, 255, 0.2);
 }
 
+.sidebar__toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 
 /* ===================================
    Page Header Components
@@ -686,15 +692,20 @@ h1 {
     }
 
     .sidebar__toggle {
+        display: block;
         font-size: 24px;
         cursor: pointer;
         padding: var(--spacing-xs);
     }
 
     .sidebar__footer {
-        display: flex;
+        display: none;
         gap: var(--spacing-xs);
         padding: var(--spacing-md);
+    }
+
+    .sidebar__footer.sidebar__footer--open {
+        display: flex;
     }
 
     .sidebar__footer-btn {
