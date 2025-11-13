@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de gestão de funcionários - Cadastro, listagem e gerenciamento">
+    <title>Sistema de Gestão de Funcionários</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <h2 class="sidebar__title">Atualização Cadastral</h2>
+            </div>
+
+            <nav class="sidebar__menu">
+                <p class="sidebar__section-title">Colaborador</p>
+                <button class="sidebar__item sidebar__item--active" onclick="window.location.href='index.html'">
+                    <span class="sidebar__item-icon">🏠</span>
+                    Home
+                </button>
+                <button class="sidebar__item" onclick="window.location.href='form-dados-pessoais.html'">
+                    <span class="sidebar__item-icon">👤</span>
+                    Dados Pessoais
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">🏛️</span>
+                    Estado Civil
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">👥</span>
+                    Dependentes
+                </button>
+                <button class="sidebar__item" onclick="window.location.href='form-contatos.html'">
+                    <span class="sidebar__item-icon">📞</span>
+                    Contatos
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">🏠</span>
+                    Endereços
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">🎓</span>
+                    Escolaridades
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">📚</span>
+                    Cursos
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">📋</span>
+                    Registros Profissionais
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">📄</span>
+                    Declarações
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">💼</span>
+                    Prova de Vida
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">📎</span>
+                    Documentos
+                </button>
+
+                <p class="sidebar__section-title">Privacidade e Ajuda</p>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">🔒</span>
+                    Aviso de Privacidade
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">📋</span>
+                    Política de Privacidade
+                </button>
+                <button class="sidebar__item" onclick="alert('Funcionalidade em desenvolvimento')">
+                    <span class="sidebar__item-icon">❓</span>
+                    Ajuda
+                </button>
+            </nav>
+
+            <div class="sidebar__footer">
+                <button class="sidebar__footer-btn" onclick="window.location.href='index.html'">
+                    <span>⬅️</span>
+                    Voltar início
+                </button>
+                <button class="sidebar__footer-btn" onclick="alert('Finalizando cadastro')" style="margin-top: 10px; background: #28a745; border-color: #28a745;">
+                    <span>✓</span>
+                    Finalizar Cadastro
+                </button>
+            </div>
+        </aside>
+
+        <div class="content-wrapper">
+            <!-- Menu Principal -->
+            <div class="menu-container" id="mainMenu">
+                <div class="home-welcome">
+                    <div class="logo-ccm">
+                        <div class="logo-ccm__circle">
+                            <span class="logo-ccm__text">CCM</span>
+                        </div>
+                        <h1 class="logo-ccm__title">Central de Cadastro Municipal</h1>
+                        <p class="logo-ccm__subtitle">Sistema de Gestão de Funcionários</p>
+                    </div>
+                    <div class="home-welcome__content">
+                        <p class="home-welcome__message">Gerencie seus funcionários de forma eficiente</p>
+                        <p class="home-welcome__instructions">Utilize o menu lateral para navegar entre as diferentes seções do sistema</p>
+                    </div>
+                </div>
+    </div>
+        </div>
+    </div>
+</body>
+</html>
